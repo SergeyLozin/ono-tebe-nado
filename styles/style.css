@@ -8,13 +8,30 @@
 }
 
 .header-menu {
-    align-items: center; 
+    align-self: center; 
+    justify-self: center;
+    font-family: Raleway;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.13px;
+    
+}
+
+.header-link-list {
+    display: flex;
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
+    gap: 35px;
+    margin-left: -50px;
+    margin-top: 10px;
+    padding-left: 10px;
     
 }
 
 .header__link {
-    text-decoration: underline;
+    text-decoration: none;
+    border-bottom: 1px solid black;
 }
 
 .header__links-list-item_no-bullet {
@@ -22,17 +39,35 @@
 }
 
 .header__links-list-item {
-    list-style: circle;       
+    list-style: circle;
+
 }
 
-.header-link-list {
-    display: flex;
-    margin: 44px 36px 39px 26.52px;
-    justify-content: space-between;    
-}
-
-.address {
+.address-block-header {
+    
     justify-self: end;
+    align-self: center;
+    font-family: Raleway;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24.3px;
+    margin-right: 35px;;
+    
+    
+}
+
+.address-destination {
+    font-style: normal;
+}
+
+.telephone-number {
+    text-decoration: none;
+    border-bottom: 1px solid black;
+}
+
+.mailto {
+    text-decoration: none;
+    border-bottom: 1px solid black;
 }
 
 /* секция cover */
@@ -41,11 +76,12 @@
     display: flex;
     flex-direction: column;
     background-image: url("/images/cover.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 757px;
     position: relative;
     z-index: 0;
-    
-    
 }
 
 .overlay {
@@ -77,15 +113,19 @@
 .aligned-text-left {
     margin-left: 50px;
     margin-top: 165px;
+    
 }
 
 .aligned-text-center {
     text-align: center;
+    margin-top: 10px;
     
 }
 
 .aligned-text-right {
     text-align: right;
+    margin-top: 8px;
+    margin-right: 19px;
 }
 
 .spaced-letters {
@@ -97,6 +137,7 @@
     justify-content: space-between;
     position: relative;
     z-index: 2;
+    margin-top: -10px;
 }
 
 .subline-text {
@@ -112,9 +153,32 @@
     
 }
 
-.subline-spaced-words {
-    letter-spacing: 1.3em;
-    
+.subline-spaced-words-one {
+    letter-spacing: 1em;
+}
+
+.subline-spaced-words-two {
+    letter-spacing: 0.7em;
+}
+
+.subline-spaced-words-three {
+    letter-spacing: 1em;
+}
+
+.subline-spaced-words-four {
+    letter-spacing: 0.9em;
+}
+
+.subline-spaced-words-five {
+    letter-spacing: 0.8em;
+}
+
+.subline-spaced-words-six {
+    letter-spacing: 0.9em;
+}
+
+.subline-spaced-words-seven {
+    letter-spacing: 0.8em;
 }
 
 .subline-button {
@@ -125,6 +189,7 @@
     font-weight: 500;
     line-height: 25.83px;
     text-align: center;
+    text-transform: uppercase;
     color: #ffff;
     padding: 12px 32px 11px 31px;
     margin-right: 50px;
@@ -143,7 +208,38 @@
     margin-top: 27px;
     margin-bottom: 30px;
     column-gap: 25px;
-    
+    position: relative;
+    z-index: 0;
+}
+
+.lots-cards-overlay-left {
+    position: absolute;
+    z-index: 1;
+    background-color: black;
+    opacity: 60%;
+    width: 334px;
+    height: 563px;
+    inset: 0;
+}
+
+.lots-cards-overlay-center {
+    position: absolute;
+    z-index: 1;
+    background-color: black;
+    opacity: 60%;
+    width: 334px;
+    height: 563px;
+    inset: 0px 0px 0px 359px;
+}
+
+.lots-cards-overlay-right {
+    position: absolute;
+    z-index: 1;
+    background-color: black;
+    opacity: 60%;
+    width: 334px;
+    height: 563px;
+    inset: 0px 0px 0px 718px;
 }
 
 .lots-card-left {
@@ -156,6 +252,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    
     
 }
 
@@ -184,6 +281,8 @@
     background-size: cover;
 }
 
+
+
 .card-heading {
     font-family: Raleway;
     font-size: 22px;
@@ -193,6 +292,9 @@
     text-decoration-style: solid;
     color: #ffff;
     text-transform: uppercase;
+    position: relative;
+    z-index: 2;
+    
 }
 
 .card-text {
@@ -201,6 +303,8 @@
     font-weight: 400;
     line-height: 24px;
     color: #ffff;
+    position: relative;
+    z-index: 2;
 }
 
 .lots-link {
@@ -209,7 +313,7 @@
     font-weight: 400;
     line-height: 23.48px;
     text-align: left;
-    text-decoration: underline;
+    border-bottom: 1px solid black;
 }
 
 .section-heading-lots{
@@ -233,9 +337,7 @@
 .about {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    margin-top: 146px;
-    
-    
+    margin: 146px 24px 155px 24px;   
 }
 
 .about__column-logo {
@@ -249,6 +351,8 @@
     border: 1px solid black;
     background-color: black;
     border-radius: 50%;
+    margin-top: 35px;
+    margin-right: 20px;
 }
 
 .about__logo-image {
@@ -258,7 +362,8 @@
 }
 
 .about__column-text {
-    margin-top: 133px;
+    margin-top: 135px;
+    margin-left: 8px;
     align-self: end;
     justify-self: center;
     justify-content: space-between;
@@ -289,29 +394,39 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: space-between;
-    padding: 180px 50px 88px 50px;
+    margin:  0px 50px 88px 50px;
+    border: 1px solid black;
     
 }
 
-.footer-address {
-    align-self: start;
-    justify-self: start;
-    
+.address-block-footer {
+    font-family: Raleway;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24.3px;
 }
 
 .footer__menu-list {
     list-style-type: none;
     text-align: center;
+    font-family: Raleway;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.13px;
 }
 
 .footer__menu-link {
-    text-decoration: underline;
+    border-bottom: 1px solid black;
 }
+
+
 
 .footer__social-list {
     list-style-type: none;
     display: flex;
     justify-content: space-between;
+    margin-left: 90px;
+
     
 }
 
@@ -319,6 +434,7 @@
     width: 48px;
     height: 48px;
 }
+
 
 
 
